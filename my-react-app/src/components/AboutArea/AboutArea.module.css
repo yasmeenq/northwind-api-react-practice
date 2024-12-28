@@ -1,0 +1,17 @@
+.AboutArea{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+
+.HidePic{
+    border: 1px dashed black;
+    width: 300px;
+    padding: 5px;
+}
+
+.hidden {
+    visibility: hidden;
+}
