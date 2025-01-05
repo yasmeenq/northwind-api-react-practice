@@ -6,21 +6,17 @@ import { productService } from "../../Services/ProductService";
 import { notify } from "../../Utils/Notify";
 
 export function EditProduct(): JSX.Element {
-    const [product, setProduct] = useState<ProductModel>({
-        id: 0, 
-        name: '', 
-        price: 0, 
-        stock: 0, 
-        image: null 
-    })
-    const params = useParams()
-    const id = +params.id
-    const navigate = useNavigate()
+    const [product, setProduct] = useState<ProductModel>();
+    const params = useParams();
+    const id = +params.id;
+    const navigate = useNavigate();
 
     useEffect(() => {
-        productService.getOneProduct(id).then(dbProduct => {
+        productService.getOneProduct(id)
+        .then( dbProduct => {
             setProduct(dbProduct)
-        }).catch(err => notify.error(err.message))
+        })
+        .catch(err => notify.error(err.message))
     }, [])
 
     function productChange(event: any) {

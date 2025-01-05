@@ -8,6 +8,7 @@ export class ProductModel {
     image?: File | null;
 
     constructor() {
+        //initial values
         this.id = 0;          
         this.name = '';      
         this.price = 0;       
@@ -15,3 +16,4 @@ export class ProductModel {
         this.image = null;    
     }
 }
+

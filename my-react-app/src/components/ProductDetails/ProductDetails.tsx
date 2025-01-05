@@ -44,7 +44,6 @@ export function ProductDetails(): JSX.Element {
             notify.error(err.message)
         }
     }
-
     //console.log(product); //{id: 7, name: "Uncle Bob's Organic Dried Pears", price: 30, stock: 15, imageUrl: 'http://localhost:3030/api/products/images/07a71aa7-9b74-4142-af23-f9513efbd4d5.jpg'}
     return (
         <div className={css.ProductDetails}>
@@ -54,9 +53,7 @@ export function ProductDetails(): JSX.Element {
             <br></br>
             <NavLink to={link}>edit</NavLink>
             <br></br>
-            <button onClick={deleteProduct}>DELETE</button>
-
-
+            <NavLink to="#" onClick={deleteProduct}>DELETE</NavLink>
         </div>
     );
 }

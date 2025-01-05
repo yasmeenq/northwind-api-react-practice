@@ -24,7 +24,7 @@ class ProductService {
     }
 
     public async editProduct(product:ProductModel):Promise<void>{
-        const options = {headers : { "Content-Type":"multipart/form-data"}};
+        const options = {headers : { "Content-Type":"multipart/form-data"}}; //for images
         const response = await axios.put<ProductModel>(appConfig.productsUrl + product.id, product, options);
         const updatedProduct = await response.data;
         //console.log(updatedProduct)
