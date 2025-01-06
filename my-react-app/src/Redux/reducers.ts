@@ -1,6 +1,7 @@
 import { ProductModel } from "../Models/ProductModel";
 import { PayloadAction } from "@reduxjs/toolkit";
 
+
 export function add(currentState:ProductModel[], action:PayloadAction<ProductModel>):ProductModel[]{
     const newState = [...currentState]; //copy of current State
     const productToAdd = action.payload;

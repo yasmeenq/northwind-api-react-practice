@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 export function AddProduct(): JSX.Element {
 
     const [product, setProduct] = useState<ProductModel>(new ProductModel()); 
+    
     function ProductChange(event:any){
         if(event.target.name === 'name'){
             product.name = event.target.value; 
@@ -27,7 +28,7 @@ export function AddProduct(): JSX.Element {
         }
         setProduct({...product});           
     }
-2
+
     const navigate = useNavigate();
 
     function addProductToDB(){

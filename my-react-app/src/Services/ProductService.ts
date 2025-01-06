@@ -31,23 +31,29 @@ class ProductService {
     }
 
     public async addProduct(product:ProductModel):Promise<void>{
+        //add to server
         const options = {headers : { "Content-Type":"multipart/form-data"}}; //for images
         const response = await axios.post<ProductModel>(appConfig.productsUrl, product, options);
         const newProduct = await response.data;
-        //console.log(newProduct);
+        //add to client redux store
+        store.dispatch(productActions.add(newProduct));
     }
 
     public async editProduct(product:ProductModel):Promise<void>{
+        //add updated item to server
         const options = {headers : { "Content-Type":"multipart/form-data"}}; //for images
         const response = await axios.put<ProductModel>(appConfig.productsUrl + product.id, product, options);
         const updatedProduct = await response.data;
-        //console.log(updatedProduct)
+        //add updated item to client redux store
+        store.dispatch(productActions.update(updatedProduct));
     }
 
     public async deleteProduct(id:number):Promise<void>{
-        const response = await axios.delete(appConfig.productsUrl + id)
+        //remove from server
+        const response = await axios.delete(appConfig.productsUrl + id);
+        //remove from client redux store
+        store.dispatch(productActions.remove(id));
     }
-    
 } 
 
 export const productService = new ProductService();
