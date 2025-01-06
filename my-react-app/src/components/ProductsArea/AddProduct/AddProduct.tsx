@@ -1,8 +1,8 @@
 import { useState } from "react";
 import css from "./AddProduct.module.css";
-import { ProductModel } from "../../Models/ProductModel";
-import { productService } from "../../Services/ProductService";
-import { notify } from "../../Utils/Notify";
+import { ProductModel } from "../../../Models/ProductModel";
+import { productService } from "../../../Services/ProductService";
+import { notify } from "../../../Utils/Notify";
 import { useNavigate } from "react-router-dom";
 
 export function AddProduct(): JSX.Element {

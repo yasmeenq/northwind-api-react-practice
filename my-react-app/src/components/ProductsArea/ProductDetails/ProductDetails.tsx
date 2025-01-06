@@ -1,10 +1,10 @@
 import { useNavigate, useParams } from "react-router-dom";
 import css from "./ProductDetails.module.css";
 import { useEffect, useState } from "react";
-import { productService } from "../../Services/ProductService";
-import { notify } from "../../Utils/Notify";
-import { ProductModel } from "../../Models/ProductModel";
-import { ProductCard } from "../ProductCard/ProductCard";
+import { productService } from "../../../Services/ProductService";
+import { notify } from "../../../Utils/Notify";
+import { ProductModel } from "../../../Models/ProductModel";
+import { ProductCard } from "../../ProductsArea/ProductCard/ProductCard";
 import { NavLink } from "react-router-dom";
 
 export function ProductDetails(): JSX.Element {

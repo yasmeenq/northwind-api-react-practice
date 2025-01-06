@@ -1,7 +1,6 @@
 import { ProductModel } from "../Models/ProductModel";
 import { PayloadAction } from "@reduxjs/toolkit";
 
-
 export function add(currentState:ProductModel[], action:PayloadAction<ProductModel>):ProductModel[]{
     const newState = [...currentState]; //copy of current State
     const productToAdd = action.payload;
@@ -29,3 +28,6 @@ export function init(currentState:ProductModel[], action:PayloadAction<ProductMo
     const allProducts = action.payload;
     return allProducts;
 }
+
+
+

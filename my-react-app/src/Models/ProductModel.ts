@@ -6,6 +6,7 @@ export class ProductModel {
     price: number;
     stock: number;
     image?: File | null;
+    imageUrl?: string;
 
     constructor() {
         //initial values
@@ -13,7 +14,8 @@ export class ProductModel {
         this.name = '';      
         this.price = 0;       
         this.stock = 0;       
-        this.image = null;    
+        this.image = null;   
+        this.imageUrl = ''; 
     }
 }
 

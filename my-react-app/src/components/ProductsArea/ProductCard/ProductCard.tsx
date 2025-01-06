@@ -1,4 +1,4 @@
-import { ProductModel } from "../../Models/ProductModel";
+import { ProductModel } from "../../../Models/ProductModel";
 import css from "./ProductCard.module.css";
 
 type ProductCardProps = {

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { ProductModel } from "../../Models/ProductModel";
+import { ProductModel } from "../../../Models/ProductModel";
 import css from "./editProduct.module.css";
 import { useNavigate, useParams } from "react-router-dom";
-import { productService } from "../../Services/ProductService";
-import { notify } from "../../Utils/Notify";
+import { productService } from "../../../Services/ProductService";
+import { notify } from "../../../Utils/Notify";
 
 export function EditProduct(): JSX.Element {
     const [product, setProduct] = useState<ProductModel>();
