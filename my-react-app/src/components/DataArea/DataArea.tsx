@@ -5,7 +5,7 @@ import { notify } from "../../Utils/Notify";
 import { ProductModel } from "../../Models/ProductModel";
 import { ProductCard } from "../ProductCard/ProductCard";
 import { NavLink } from "react-router-dom";
-
+import { store } from "../../Redux/store";
 
 export function DataArea(): JSX.Element {
     const [products, setProducts] = useState<ProductModel[]>([]);
@@ -21,7 +21,7 @@ export function DataArea(): JSX.Element {
             }
         }
         getProducts();
-    }, [])
+    }, [store.getState().products.length])
 
     return (
         <div className={css.DataArea}>
