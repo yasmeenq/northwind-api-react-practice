@@ -21,7 +21,7 @@ export function RoutingArea(): JSX.Element {
                 <Route path="/product/edit/:id" element={ <EditProduct/> } />
                 <Route path="/new" element={<AddProduct />}/>
 
-                <Route path="workers" element={ <Workers />}/>
+                <Route path="/workers" element={ <Workers />}/>
 
                 <Route path="/*" element={ <PageNotFound /> } />
             </Routes>

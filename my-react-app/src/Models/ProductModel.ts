@@ -1,21 +1,12 @@
 
 
 export class ProductModel {
-    id: number;
-    name: string;
-    price: number;
-    stock: number;
-    image?: File | null;
-    imageUrl?: string;
+    public id: number;
+    public name: string;
+    public price: number;
+    public stock: number;
+    public image?: File | null;
+    public imageUrl?: string;
 
-    constructor() {
-        //initial values
-        this.id = 0;          
-        this.name = '';      
-        this.price = 0;       
-        this.stock = 0;       
-        this.image = null;   
-        this.imageUrl = ''; 
-    }
 }
 

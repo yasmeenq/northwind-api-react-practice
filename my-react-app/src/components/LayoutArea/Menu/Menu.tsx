@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import css from "./Menu.module.css";
+import { TotalProducts } from "../../ProductsArea/TotalProducts/TotalProducts";
 
 export function Menu(): JSX.Element {
     return (
@@ -9,6 +10,8 @@ export function Menu(): JSX.Element {
             <NavLink to={'/products'}>data</NavLink>
             <NavLink to={'/new'}>add product</NavLink>
             <NavLink to={'/workers'}>Workers</NavLink>
+
+            <TotalProducts />
         </div>
     );
 }

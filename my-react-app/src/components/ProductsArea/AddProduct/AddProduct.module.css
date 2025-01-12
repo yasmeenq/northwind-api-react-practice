@@ -1,18 +1,21 @@
 .AddProduct {
-	display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	
 }
 
-.newForm{
-    border: 1px dashed black;
-    border-radius: 30px;
-    padding: 10px;
-    margin-top: 30px;
+form{
     width: 300px;
-}
-.newForm > input, button{
-    margin: 20px;
+    border:1px solid;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 5px 5px 10px;
+    text-align: center;
+
 }
 
+form > input, form > button{
+
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
