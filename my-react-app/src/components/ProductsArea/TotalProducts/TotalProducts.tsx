@@ -19,7 +19,7 @@ export function TotalProducts(): JSX.Element {
     
     return (
         <div className={css.TotalProducts}>
-			count = {count} 🎎
+			product count = {count} 🎎
         </div>
     );
 }

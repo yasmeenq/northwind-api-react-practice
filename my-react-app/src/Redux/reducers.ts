@@ -1,5 +1,6 @@
 import { ProductModel } from "../Models/ProductModel";
 import { PayloadAction } from "@reduxjs/toolkit";
+import { UserModel } from "../Models/UserModel";
 
 export function add(currentState:ProductModel[], action:PayloadAction<ProductModel>):ProductModel[]{
     const newState = [...currentState]; //copy of current State
@@ -30,5 +31,14 @@ export function init(currentState:ProductModel[], action:PayloadAction<ProductMo
 }
 
 //---------------------------------------------------------------------------------
-
-
+export function login(currentState:UserModel, action:PayloadAction<UserModel>):UserModel{
+    const newState = action.payload;
+    return newState;
+}
+export function register(currentState:UserModel, action:PayloadAction<UserModel>):UserModel{
+    const newState = action.payload;
+    return newState;
+}
+export function logout(currentState:UserModel, action:PayloadAction<UserModel>):UserModel{
+    return null;
+}

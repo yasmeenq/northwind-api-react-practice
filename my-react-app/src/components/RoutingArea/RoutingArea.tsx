@@ -7,6 +7,8 @@ import { ProductDetails } from "../ProductsArea/ProductDetails/ProductDetails";
 import { AddProduct } from "../ProductsArea/AddProduct/AddProduct";
 import { EditProduct } from "../ProductsArea/editProduct/editProduct";
 import { Workers } from "../WorkersArea/Workers/Workers";
+import { Login } from "../UserArea/Login/Login";
+import { Register } from "../UserArea/Register/Register";
 
 export function RoutingArea(): JSX.Element {
     return (
@@ -22,6 +24,9 @@ export function RoutingArea(): JSX.Element {
                 <Route path="/new" element={<AddProduct />}/>
 
                 <Route path="/workers" element={ <Workers />}/>
+
+                <Route path="/login" element={ <Login /> } />
+                <Route path="/register" element={ <Register /> } />
 
                 <Route path="/*" element={ <PageNotFound /> } />
             </Routes>

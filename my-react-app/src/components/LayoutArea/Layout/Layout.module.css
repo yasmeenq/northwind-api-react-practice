@@ -4,6 +4,7 @@
 	display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 10% 85% 5%;
+    
 }
 
 header, footer{
@@ -13,5 +14,10 @@ main{
     overflow: auto;
 }
 .Layout, .Layout > *{
-    border: 1px solid darkblue;
+    border: 1px solid #074a6b;
+}
+
+a{
+    text-decoration: none;
+    color: #074a6b;
 }

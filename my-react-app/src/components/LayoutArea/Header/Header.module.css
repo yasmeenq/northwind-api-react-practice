@@ -2,6 +2,9 @@
 	height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     font-size: 4vh;
+    color: #074a6b;
+    background-color:  #87bdd8;
+    padding: 0 20px 0 20px ;
 }
