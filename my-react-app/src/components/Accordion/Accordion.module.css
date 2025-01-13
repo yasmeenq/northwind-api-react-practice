@@ -1,0 +1,11 @@
+.Accordion {
+    margin: 20px;
+    border: 1px dashed black;
+    padding: 30px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}

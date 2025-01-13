@@ -9,6 +9,7 @@ import { EditProduct } from "../ProductsArea/editProduct/editProduct";
 import { Workers } from "../WorkersArea/Workers/Workers";
 import { Login } from "../UserArea/Login/Login";
 import { Register } from "../UserArea/Register/Register";
+import { Quiz } from "../Quiz/Quiz";
 
 export function RoutingArea(): JSX.Element {
     return (
@@ -27,6 +28,8 @@ export function RoutingArea(): JSX.Element {
 
                 <Route path="/login" element={ <Login /> } />
                 <Route path="/register" element={ <Register /> } />
+
+                <Route path="quiz" element={ <Quiz /> }/>
 
                 <Route path="/*" element={ <PageNotFound /> } />
             </Routes>

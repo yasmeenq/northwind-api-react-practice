@@ -1,0 +1,38 @@
+import { useState } from "react";
+import css from "./Accordion.module.css";
+
+
+export function Accordion(): JSX.Element {
+
+  const questions: string[] = [
+    'What planet do we live on?',
+    'How many sides does a triangle have?',
+    'What is the opposite of night?'
+  ];
+
+  const answers: string[] = [
+    'Earth', 'Three', 'Day'
+  ];
+
+  // State to track visibility for each box
+  const [visibleIndices, setVisibleIndices] = useState<boolean[]>(new Array(questions.length).fill(false));
+
+  function toggleVisibility(index: number) {
+    setVisibleIndices(prev =>
+      prev.map((visible, i) => (i === index ? !visible : visible))
+    );
+  }
+
+  return (
+    <div className={css.Accordion}>
+      {questions.map((question, index) => (
+        <div key={index} className={css.box} onClick={() => toggleVisibility(index)}>
+          <p> {question} </p>
+          <p className={`${visibleIndices[index] ? "" : css.hidden}`}>
+            {answers[index]}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+}
