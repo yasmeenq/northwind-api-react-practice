@@ -7,11 +7,19 @@ class Notify {
         position: {x: "center", y:"top"}
     });
 
-    public success(message:string):void{
-        this.notyf.success(message)
+    public success(message:any):void{
+        this.notyf.success(message);
     }
-    public error(message:string):void{
-        this.notyf.error(message)
+    public error(message:any):void{
+        message = this.extractErrorMessage(message);
+        this.notyf.error(message);
+    }
+
+    private extractErrorMessage(err:any):string{
+        if(typeof err==="string" && err!=="") return err;
+        if(typeof err?.response?.data === "string" && err.response.date !== "") return err.response.data; 
+        if(typeof err?.message === "string" && err.message !=="") return err.message;
+        return "some error, please try again.";
     }
 }
 

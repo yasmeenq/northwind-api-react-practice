@@ -41,7 +41,7 @@ export function ProductDetails(): JSX.Element {
             notify.success("product deleted successfully !!!")
         }
         catch(err:any){
-            notify.error(err.message)
+            notify.error(err)
         }
     }
     //console.log(product); //{id: 7, name: "Uncle Bob's Organic Dried Pears", price: 30, stock: 15, imageUrl: 'http://localhost:3030/api/products/images/07a71aa7-9b74-4142-af23-f9513efbd4d5.jpg'}

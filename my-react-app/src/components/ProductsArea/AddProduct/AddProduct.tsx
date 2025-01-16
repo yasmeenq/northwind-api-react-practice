@@ -38,7 +38,7 @@ export function AddProduct(): JSX.Element {
         }
         catch(err:any)
         {
-            notify.error(err.message)
+            notify.error(err)
         }
     }
     

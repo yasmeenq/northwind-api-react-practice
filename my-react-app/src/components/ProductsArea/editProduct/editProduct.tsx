@@ -16,7 +16,7 @@ export function EditProduct(): JSX.Element {
         .then( dbProduct => {
             setProduct(dbProduct)
         })
-        .catch(err => notify.error(err.message))
+        .catch(err => notify.error(err))
     }, [])
 
     function productChange(event: any) {
@@ -47,7 +47,7 @@ export function EditProduct(): JSX.Element {
             navigate("/products")
         }
         catch (err: any) {
-            notify.error(err.message)
+            notify.error(err)
         }
     }
 
