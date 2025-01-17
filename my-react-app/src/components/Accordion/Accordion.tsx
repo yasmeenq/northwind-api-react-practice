@@ -8,23 +8,23 @@ type AccordionProps = {
 
 export function Accordion({ question, answer }: AccordionProps): JSX.Element {
 
-    const [visible, setVisible] = useState<Boolean>(false);
+    const [visible, setVisible] = useState<boolean>(false);
 
-    function toggleVisibilty() {
+    function toggleVisibility() {
         setVisible(!visible);
     }
 
     return (
         <div className={css.Accordion}>
 
-            <div className={css.question} onClick={toggleVisibilty}>
+            <div className={css.question} onClick={toggleVisibility}>
                 <p>{question}</p>
             </div>
 
             {visible && (
                 <div className={css.answer}>
                     <p>{answer}</p>
-                    <button onClick={toggleVisibilty}>close</button>
+                    <button onClick={toggleVisibility}>close</button>
                 </div>
             )}
 

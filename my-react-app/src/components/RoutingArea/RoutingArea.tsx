@@ -29,7 +29,7 @@ export function RoutingArea(): JSX.Element {
                 <Route path="/login" element={ <Login /> } />
                 <Route path="/register" element={ <Register /> } />
 
-                <Route path="quiz" element={ <Quiz /> }/>
+                <Route path="/quiz" element={ <Quiz /> }/>
 
                 <Route path="/*" element={ <PageNotFound /> } />
             </Routes>
